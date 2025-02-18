@@ -1,0 +1,54 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+margin: 0;
+}
+
+header {
+background: rgb(52, 206, 142);
+height: 100px;
+}
+
+h1 {
+text-align: center;
+color: white;
+line-height: 100px;
+margin: 0;
+}
+
+article {
+padding: 10px;
+margin: 10px;
+background: rgba(16, 233, 215, 0.178);
+}
+
+#articles_1_2_3,
+#articles_4_5_6_7_8_9_10,
+#articles_4_5_6,
+#articles_7_8_9_10,
+#articles_7_8,
+#articles_9_10 {
+display: flex;
+}
+
+#articles_7_8_9_10 {
+order: -1;/*изменяет порядок отображение*/
+flex-wrap: wrap; /*Дочерние переходят на новую строку если нет места*/
+flex: 2; /*гибкость в 2 раза чтобы заполнчлось свободное пространство*/
+}
+
+#articles_4_5_6 {
+flex-direction: column-reverse;
+flex: 1;/*может занимать 1 часть пространства при распределении*/
+}
+
+#articles_7_8,
+#articles_9_10 {
+align-content: stretch;/*дочерние этих могут растягиваться и заполнять равномерно свободное место*/
+}
+
+#articles_4_5_6_7_8_9_10 {
+align-items: stretch;
+}
