@@ -29,7 +29,7 @@ button {
   cursor: pointer; /*Меняется курсор на указатель при наведении на кнопку*/
 }
 button:hover { /*Выполнится при наведении*/
-animation-name: none; /*Уюирается анимация*/
+animation-name: none; /*Убирается анимация*/
 margin: 50px;
 background-color: lawngreen;
 }
