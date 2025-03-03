@@ -1,0 +1,46 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+margin: 0;
+}
+
+header {
+background: rgb(52, 206, 142);
+height: 100px;
+}
+
+h1 {
+text-align: center;
+color: white;
+line-height: 100px;
+margin: 0;
+}
+
+article {
+padding: 10px;
+margin: 10px;
+background: rgba(16, 233, 215, 0.178);
+}
+
+
+.grid {
+  display: grid; /* Устанавливает элемент .grid как CSS Grid Container. */
+  grid-template-areas: /* Определяет макет сетки, задавая области размещения для дочерних элементов. */
+      "item1 item2 item3 item3" /* Первая строка сетки содержит item1, item2, и item3 (item3 занимает два столбца). */
+      "item1 item4 item3 item3" /* Вторая строка сетки содержит item1, item4, и item3 (item3 занимает два столбца). */
+      "item1 item5 item6 item7" /* Третья строка сетки содержит item1, item5, item6 и item7. */
+      "item8 item9 item9 item10"; /* Четвёртая строка сетки содержит item8, item9 (занимает два столбца) и item10. */
+}
+
+article:nth-child(1) { grid-area: item1; } /* Назначает первый элемент article области grid под именем item1. */
+article:nth-child(2) { grid-area: item2; } /* Назначает второй элемент article области grid под именем item2. */
+article:nth-child(3) { grid-area: item3; } /* Назначает третий элемент article области grid под именем item3. */
+article:nth-child(4) { grid-area: item4; } /* Назначает четвёртый элемент article области grid под именем item4. */
+article:nth-child(5) { grid-area: item5; } /* Назначает пятый элемент article области grid под именем item5. */
+article:nth-child(6) { grid-area: item6; } /* Назначает шестой элемент article области grid под именем item6. */
+article:nth-child(7) { grid-area: item7; } /* Назначает седьмой элемент article области grid под именем item7. */
+article:nth-child(8) { grid-area: item8; } /* Назначает восьмой элемент article области grid под именем item8. */
+article:nth-child(9) { grid-area: item9; } /* Назначает девятый элемент article области grid под именем item9. */
+article:nth-child(10) { grid-area: item10; } /* Назначает десятый элемент article области grid под именем item10. */
