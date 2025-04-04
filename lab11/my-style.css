@@ -1,0 +1,103 @@
+body .wrapper {
+    max-width: 100% !important;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    width: calc(100% - 10px);
+    z-index: 1000;
+    background: #6afffa;
+    padding: 10px 0px 10px 0px; 
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    left: 10px;
+    width: calc(100% - 10px);
+    z-index: 1000;
+    background: #6afffa;
+    padding: 10px 0px 10px 0px; 
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.main {
+    margin-top: 30px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    min-height: calc(100vh - 60px);
+}
+
+article.article p {
+    font-style: normal !important; 
+}
+
+.blockquote {
+    font-style: italic;
+}
+
+body {
+    text-align: center;
+}
+
+.word {
+    position: sticky;
+    top: 50px;
+    padding: 5px;
+    width: fit-content;
+    z-index: 1000;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px;
+}
+
+
+.word.first { background-color:rgb(255, 0, 0); left: 10px; }
+.word.second { background-color:rgb(0, 255, 0); left: 81px; }
+.word.third { background-color:rgb(0, 0, 255); left: 108px; }
+.word.fourth { background-color:rgb(255, 255, 0); left: 165px; }
+.word.fifth { background-color:rgb(230, 0, 255); left: 249px; }
+
+/*сначала h3 потом img и к этому абзацу(первой букве) применять*/
+article h3 + img + p::first-letter {
+    font-size: 200%;
+    color:rgb(195, 0, 0);
+}
+
+/* Чередование картинок, с нечетным порядковым номером – слева, четным – справа */
+article:nth-of-type(odd) img {
+    float: left;
+    margin: 0px 15px 15px 0px; /*верх право низ лево*/
+}
+
+article:nth-of-type(even) img {
+    float: right;
+    margin: 0px 0px 15px 15px;
+}
+
+article img {
+    height: 120px !important;
+}
+
+.footer a {
+    color: blue !important; 
+    cursor: default !important;
+    text-decoration: underline !important;
+    margin-left: 5px;
+}
+
+.footer a:hover {
+    cursor: default;
+}
